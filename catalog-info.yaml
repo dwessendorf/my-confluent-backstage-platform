@@ -1,13 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-confluent-backstage-platform
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: confluent-provisioning
+  description: "Terraform to provision Confluent Cloud environment & cluster"
+  annotations:
+    # Example annotation linking to your GitHub Actions
+    # This can help visualize build status in Backstage
+    "github.com/project-slug": "dwessendorf/confluent-backstage-self-service-part-1" 
 spec:
-  type: website
-  owner: john@example.com
+  type: service
+  owner: your-team
   lifecycle: experimental
+  links:
+    - url: "https://github.com/dwessendorf/confluent-backstage-self-service-part-1/tree/main/terraform"
+      title: "Terraform Code"
